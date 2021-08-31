@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class PhraseController extends Controller
 {
-   // Enter Data Fun.
+ 
    public function EnterData(){
     return view('pages.phrase');
 }
