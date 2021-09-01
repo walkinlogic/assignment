@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class PhraseController extends Controller
 {
  
-   public function EnterData(){
-    return view('pages.phrase');
-}
+    public function EnterData(){
+		return view('pages.phrase');
+	}
 
 
 // Analyse Data
@@ -20,10 +20,10 @@ public function Analyse(Request $request){
         'phrase'=>'required'
     ]);
    $string = $request->phrase;
-   $string_array = str_split($string); //split string to array of chars
+   $string_array = str_split($string); 
    $string_chars =[];
-   foreach ($string_array as  $value) {// remove what not alphabetical 
-       if(preg_match('/[a-zA-Z]/', $value))
+   foreach ($string_array as  $value) { 
+       if(!preg_match('/[ ]/', $value))
        {
            $string_chars []=$value;
        }
@@ -38,7 +38,7 @@ public function Analyse(Request $request){
            $data[$key] .=  $this->find_max_distance($key,$string,$string_array);
        }
    }
-   return view('pages.statistical-analysis',['chars' => $chars_count , 'data' => $data]);
+   return view('pages.statistical-analysis',['chars' => $chars_count , 'data' => $data , 'string' => $string]);
 }
 
 

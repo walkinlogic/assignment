@@ -6,11 +6,12 @@
     
 <div class="content text-center">
     <h1 class="p-5 font-italic font-weight-bold shadow bg-info text-white"> Statistical Analysis</h1>
+    <h2 class=""> {{$string}}</h2>
     <table id="table" class="table table-hover shadow my-5 ">
         <thead class="thead-dark font-weight-bolder ">
             <tr>
-                <th class="py-3" scope="col"> symbols.</th>
-                <th class="py-3" scope="col"> times encountered</th>
+                <th class="py-3" scope="col"> Symbols.</th>
+                <th class="py-3" scope="col"> Times encountered</th>
                 <th class="py-3" scope="col">sibling character info</th>
             </tr>
         </thead>

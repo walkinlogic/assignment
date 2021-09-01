@@ -7,7 +7,7 @@
         <h1 class="p-5 font-italic font-weight-bold shadow bg-info text-white text-center">Phrase Analyse </h1>
         <div class=" mt-5 p-5 shadow text-dark ">
 
-            <form action="{{url('/analyse/result')}}" method="POST" >
+            <form action="{{url('/result')}}" method="POST" >
                 @csrf
                 <div class="form-group text-center ">
                     <label for="phrase" class="pb-4">Write A Phrase, please</label>

@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
  
-Route::get('/','PhraseController@EnterData');
-Route::get('/analyse','PhraseController@EnterData');
-Route::post('/analyse/result','PhraseController@analyse');
+Route::get('/','PhraseController@EnterData'); 
+Route::post('/result','PhraseController@analyse');
